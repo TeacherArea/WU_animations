@@ -1,0 +1,95 @@
+#article:hover {
+    max-height: 1200px;
+}
+
+#article:visited {
+    
+    transition: none;
+}
+
+body {
+    min-height: 200px;
+    margin-bottom: 350px;
+    clear: both;
+}
+
+#article {
+    border: solid 1px grey;
+    padding: 20px;
+    max-width: 800px;
+    max-height: 250px;
+    overflow-y: hidden;
+    transition: max-height 0.7s linear;
+}
+
+article {
+    max-width: 800px;
+    
+}
+
+.img-container {
+    float: left;
+    margin: 30px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-content: center;    
+  }
+
+.img-container > img {
+    width: 300px;
+    height: 200px;
+    -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(80%);
+}
+
+.img-container > img:hover{
+    animation: flapping 1s 1;
+  }
+
+  @keyframes flapping {
+    0%   { width: 300px; }
+    15%  { width: 150px; }
+    40%  { width: 300px; }
+    60%  { width: 150px; }
+    100% { width: 300px; }
+  }
+
+
+#img-transition {
+    margin: 20px 0 20px 0;
+    max-width: 500px;
+    max-height: 200px;
+    box-shadow: 5px 5px 10px 1px gray;
+  }
+  
+  #img-transition:hover {
+    max-height: 1500px;
+    max-width: 800px;
+    transition: max-width 0.7s;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 220px;
+    background-image: url("img/pexels-george-desipris-748626.jpg");
+    background-size: cover;
+  }
+
+footer > p {
+    padding: 20% 0 0 60%;
+    letter-spacing: 10px;
+    color: white;
+    font-size: 5rem;
+}
+
+footer:hover {
+    max-height: 600px;
+    -webkit-transition: max-height 2s ease-out;
+    -moz-transition: max-height 2s ease-out;
+    -o-transition: max-height 2s ease-out;
+    transition: max-height 2s ease-out;
+  }
