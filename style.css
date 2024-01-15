@@ -1,95 +1,171 @@
-#article:hover {
-    max-height: 1200px;
+h1 {
+  margin-left: 10px;
 }
 
-#article:visited {
-    
-    transition: none;
-}
-
-body {
-    min-height: 200px;
-    margin-bottom: 350px;
-    clear: both;
-}
-
-#article {
-    border: solid 1px grey;
-    padding: 20px;
-    max-width: 800px;
-    max-height: 250px;
-    overflow-y: hidden;
-    transition: max-height 0.7s linear;
+.pulsating {
+  transform: translateX(-50%) translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+  animation: pulse 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
 }
 
 article {
-    max-width: 800px;
-    
+  max-width: 800px;
+  margin-top: 5rem;
+  padding: 0 2rem 0 2rem;
 }
 
-.img-container {
-    float: left;
-    margin: 30px;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-content: center;    
-  }
-
-.img-container > img {
-    width: 300px;
-    height: 200px;
-    -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(80%);
+#article {
+  margin: 5rem 2rem 0 2rem;
+  border: solid 1px grey;
+  max-width: 800px;
+  max-height: 250px;
+  overflow-y: hidden;
+  transition: max-height 0.8s linear;
 }
 
-.img-container > img:hover{
-    animation: flapping 1s 1;
-  }
+#article:hover {
+  max-height: 1200px;
+}
 
-  @keyframes flapping {
-    0%   { width: 300px; }
-    15%  { width: 150px; }
-    40%  { width: 300px; }
-    60%  { width: 150px; }
-    100% { width: 300px; }
-  }
+#article:visited {
+  transition: none;
+}
 
+.header-container {
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+#sphere-button {
+  margin-bottom: 20px;
+}
+
+#back-sphere-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid red;
+  z-index: -10;
+}
+
+.img-butterfly-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  margin: 30px;
+  margin-top: 5rem;
+}
+
+.img-wrapper {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(80%);
+  transition: all 0.3s ease;
+}
+
+.img-wrapper img:hover {
+  animation: flapping 1s infinite;
+}
+
+@keyframes flapping {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  25%, 75% {
+    transform: scaleX(0.8);
+  }
+  50% {
+    transform: scaleX(0.6);
+  }
+}
 
 #img-transition {
-    margin: 20px 0 20px 0;
-    max-width: 500px;
-    max-height: 200px;
-    box-shadow: 5px 5px 10px 1px gray;
-  }
-  
-  #img-transition:hover {
-    max-height: 1500px;
-    max-width: 800px;
-    transition: max-width 0.7s;
-  }
+  margin: 20px 0 20px 0;
+  max-width: 300px;
+  max-height: 200px;
+  box-shadow: 5px 5px 10px 1px gray;
+  transition: max-width 0.7s ease, max-height 0.7s ease;
+}
 
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    max-height: 220px;
-    background-image: url("img/pexels-george-desipris-748626.jpg");
-    background-size: cover;
+#img-transition:hover {
+  max-height: 1200px;
+  max-width: 750px;
+}
+
+#animated {
+  width: 100px;
+  height: 100px;
+  left: 20rem;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(50px) translateY(100px) translateZ(50px);
+}
+
+@keyframes rotateAndPulse {
+  0%, 100% {
+    transform: rotate3d(1, 1, 1, 0deg) scale(1);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(100, 100, 100, 0.8);
   }
+  50% {
+    transform: rotate3d(2, 1, 0, 180deg) scale(1.5);
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(100, 200, 150, 0.2);
+  }
+}
+.rotating {
+  animation: rotateAndPulse 10s linear infinite;
+}
+
+
+.rotating {
+  animation: rotateAndPulse 10s linear infinite;
+}
+
+#last {
+  margin-bottom: 120px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 100px;
+  background-image: url("img/pexels-george-desipris-748626.jpg");
+  background-size: cover;
+  transition: max-height 0.4s ease-out;
+}
 
 footer > p {
-    padding: 20% 0 0 60%;
-    letter-spacing: 10px;
-    color: white;
-    font-size: 5rem;
+  padding: 20% 0 0 60%;
+  letter-spacing: 10px;
+  color: white;
+  font-size: 5rem;
 }
 
 footer:hover {
-    max-height: 600px;
-    -webkit-transition: max-height 2s ease-out;
-    -moz-transition: max-height 2s ease-out;
-    -o-transition: max-height 2s ease-out;
-    transition: max-height 2s ease-out;
-  }
+  max-height: 600px;
+  transition: max-height 1s ease-out;
+}
