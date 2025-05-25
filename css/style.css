@@ -1,0 +1,300 @@
+/* Generella inställningar */
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.header-wrapper {
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 10px;
+  font-size: 5em;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-red-color {
+  color: red;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: black;
+}
+
+
+/* Pulserande liten "punkt" */
+
+.pulsating {
+  transform: translateX(-50%) translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+  animation: pulse 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+
+/* Fade in och out på artiklar */
+
+article {
+  position: relative;
+  max-width: 800px;
+  margin-top: 2rem;
+  padding: 0 2rem 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:rgba(255, 255, 255, 0.9);
+  border: solid 1px grey;
+}
+
+.article-fade {
+  max-width: 800px;
+  max-height: 200px;
+  overflow-y: hidden;
+  transition: max-height 0.8s linear;
+}
+
+article, .article-fade, .header-container {
+  position: relative;
+  z-index: 1; 
+}
+
+.article-fade:hover {
+  max-height: 1600px;
+}
+
+.article-fade:visited {
+  transition: none;
+}
+
+
+/* Animationer med fjärilar */
+.butterfly-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  margin: 30px;
+  margin-top: 5rem;
+  z-index: 1;
+}
+
+.butterfly-wrapper {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.butterfly-wrapper img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(80%);
+  transition: all 0.3s ease;
+}
+
+.butterfly-wrapper img:hover {
+  animation: flapping 1s infinite;
+}
+
+@keyframes flapping {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  25%,
+  75% {
+    transform: scaleX(0.8);
+  }
+  50% {
+    transform: scaleX(0.6);
+  }
+}
+
+
+/* Animation kopplad till bilden på månen (inte i footer) */
+
+#img-transition {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+  max-width: 300px;
+  max-height: 200px;
+  box-shadow: 5px 5px 10px 1px gray;
+  transition: max-width 0.7s ease, max-height 0.7s ease;
+}
+
+#img-transition:hover {
+  max-height: 1200px;
+  max-width: 800px;
+}
+
+
+/* Animation kopplad till knappen */
+
+#animate-button {
+  display: block;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  height: 3em;
+  width: 10em;
+}
+
+#animated {
+  width: 100px;
+  height: 100px;
+  left: 30rem;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(50px) translateY(100px) translateZ(50px);
+}
+
+@keyframes rotateAndPulse {
+  0%,
+  100% {
+    transform: rotate3d(1, 1, 1, 0deg) scale(1);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(100, 100, 100, 0.8);
+  }
+  50% {
+    transform: rotate3d(2, 1, 0, 180deg) scale(1.5);
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(100, 200, 150, 0.2);
+  }
+}
+
+.rotating {
+  animation: rotateAndPulse 10s linear infinite;
+}
+
+
+/* Bakgrundssfären */
+
+#sphere-button {
+  margin-bottom: 20px;
+}
+
+#sphere-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1; 
+  background: linear-gradient(30deg, rgb(216, 211, 171, 0.8) 9%, #ffffff 53%);
+}
+
+.sphere-scene {
+  width: 600px;
+  height: 600px;
+  transform: rotateX(45deg) rotateY(45deg);
+  transform-style: preserve-3d;
+}
+
+.sphere-wrapper {
+  width: 100%;
+  height: 100%;
+   transform-style: preserve-3d;
+}
+
+.sphere-rotate {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: rotateSphere 100s infinite linear;
+}
+
+@keyframes rotateSphere {
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 1px dotted gray;
+  box-shadow: 1px 0px 20px -2px rgba(0, 0, 0, 0.3), 1px 0px 50px -2px rgb(255, 252, 236, 0.3);
+}
+
+
+/* Footer */
+
+#footer-hack { /* för att inte footer ska kapa slutet på artikeln */
+  margin-bottom: 130px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 100px;
+  background-image: url("../assets/img/pexels-george-desipris-moon.jpg");
+  background-size: cover;
+  transition: max-height 0.4s ease-out;
+  z-index: 1;
+}
+
+#footer-menu {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  font-size: 2em;
+}
+
+#footer-menu > a {
+  z-index: 10;
+  color: white;
+  text-decoration: none;
+  margin: 0 20px 0 20px;
+}
+
+#footer-menu > a:hover {
+  color: red;
+}
+
+footer > p {
+  padding: 20% 0 0 55%;
+  letter-spacing: 10px;
+  color: white;
+  font-size: 2rem;
+}
+
+footer:hover {
+  max-height: 600px;
+  transition: max-height 0.3s ease-out;
+}

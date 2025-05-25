@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <title>Animations | Övningar</title>
+</head>
+
+<body>
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="pulsating"></div>
+      <h1>Resurser</h1>
+    </div>
+  </div>
+
+  <div id="sphere-container">
+    <div class="sphere-scene">
+      <div class="sphere-wrapper">
+        <div class="sphere-rotate" id="sphere"></div>
+      </div>
+    </div>
+  </div>
+
+  <article class="article-fade">
+    <h2>Animationer och Javascript</h3>
+    <p>Man kan göra mycket med CSS, men det är begränsat till vissa egenskaper: opacity, transform, color, etc.
+      Height, width och display kan dessutom ge problem. Det finns ingen inbyggd logik för tillstånd eller
+      villkor.</p>
+    <p>
+      Det är här JavaScript kommer in i bilden: full kontroll över tid, tillstånd, villkor och interaktion. Typiska
+      användsområden är:
+    </p>
+    <ul>
+      <li>användning av realtidsdata</li>
+      <li>spel</li>
+      <li>interaktiva simuleringar</li>
+      <li>animationer kopplade till att scrolla</li>
+      <li>starta och stoppa css-animationer</li>   
+      <li>andra tillståndsstyrda övergångar (öppna meny, flytta a till b, etc)</li>
+    </ul>
+  </article>
+
+  <article class="article-fade">
+    <h2>Din tur</h3>
+    <ul>
+    <li><a rel="noopener" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_animate_3" target="_blank">flytta a till b</a>>(tillståndsstyrda övergångar)</li>
+      <li><a rel="noopener" href="https://www.w3schools.com/graphics/canvas_clock.asp" target="_blank">skapa en klocka</a> (realtid)</li>
+      <li><a rel="noopener" href="#">interaktiva simuleringar</a></li>
+      <li><a rel="noopener" href="#">animationer kopplade till att scrolla</a></li>
+      <li><a href="index.html">starta och stoppa css-animationer</a> (se första sidan)</li>
+      
+    </ul>
+  </article>
+    
+  <div id="footer-hack"></div>
+  <footer>
+    <nav >
+        <p id="footer-menu">| <a href="index.html">hem</a> | <a href="exercises.html">resurser</a> | </p>
+      </nav>
+    <p>UNLEACH YOUR ANIMATED FURY!</p>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>

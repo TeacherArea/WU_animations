@@ -1,127 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Companyname | Home</title>
-  </head>
-  <body>
-    <div class="header-container">
-      <div class="header-wrapper">
-        <div class="pulsating"></div>
-        <h1>Some few anim tricks</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <title>Animations | Hem</title>
+</head>
+
+<body>
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="pulsating"></div>
+      <h1>Animationer</h1>
+    </div>
+  </div>
+
+  <div id="sphere-container">
+    <div class="sphere-scene">
+      <div class="sphere-wrapper">
+        <div class="sphere-rotate" id="sphere"></div>
       </div>
     </div>
+  </div>
 
-      <div id="back-sphere-container">
-        <div id="back-sphere-main">
-          <div class="scene">
-            <div class="wrapper">
-              <div class="sphere" id="sphere"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    <article id="article">
-      <h2>Lorem ipsum dolor sit</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error
-        unde, expedita, tempora molestias fugit, dolorem eaque exercitationem
-        pariatur animi incidunt at ex perspiciatis nihil. Ad eum cumque
-        voluptatum vero. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Rerum error unde, expedita, tempora molestias fugit, dolorem eaque
-        exercitationem pariatur animi incidunt at ex perspiciatis nihil. Ad eum
-        cumque voluptatum vero.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error
-        unde, expedita, tempora molestias fugit, dolorem eaque exercitationem
-        pariatur animi incidunt at ex perspiciatis nihil. Ad eum cumque
-        voluptatum vero. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Rerum error unde, expedita, tempora molestias fugit, dolorem eaque
-        exercitationem pariatur animi incidunt at ex perspiciatis nihil. Ad eum
-        cumque voluptatum vero.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error
-        unde, expedita, tempora molestias fugit, dolorem eaque exercitationem
-        pariatur animi incidunt at ex perspiciatis nihil. Ad eum cumque
-        voluptatum vero. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Rerum error unde, expedita, tempora molestias fugit, dolorem eaque
-        exercitationem pariatur animi incidunt at ex perspiciatis nihil. Ad eum
-        cumque voluptatum vero.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error
-        unde, expedita, tempora molestias fugit, dolorem eaque exercitationem
-        pariatur animi incidunt at ex perspiciatis nihil. Ad eum cumque
-        voluptatum vero. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Rerum error unde, expedita, tempora molestias fugit, dolorem eaque
-        exercitationem pariatur animi incidunt at ex perspiciatis nihil. Ad eum
-        cumque voluptatum vero.
-      </p>
-    </article>
-
-    <div class="img-butterfly-container">
-      <div class="img-wrapper">
-        <img src="img/butterfly.webp" alt="a nice butterfly" />
-      </div>
-      <div class="img-wrapper">
-        <img src="img/butterfly.webp" alt="a nice butterfly" />
-      </div>
+  <article class="article-fade">
+    <h2>CSS sköter ofta det mesta</h2>
+    <p>
+      CSS har inbyggda animationsmöjligheter. Dessa är förvånansvärt ofta att föredra, inte minst av prestandaskäl.
+      Vanliga användningsområden är
+    </p>
+    <ul>
+      <li>hover-effekter</li>
+      <li>fade in/out</li>
+      <li>rörelser som sker alltid eller villkorslöst</li>
+    </ul>
+    <h3>Exempel CSS-animationer på denna sida (sätt handen över denna text):</h3>
+    <p>
+    <ol>
+      <li>Pulseringen brevid huvudrubriken "Animationer" (class <span class="text-italic">pulsating</span>).
+      <li>Alla exempel med fade-in och fade-out, som
+        <ol type="i">
+          <li>denna textruta (id <span class="text-italic">article</span>)
+          <li>bilden på månen inuti denna textruta (id <span class="text-italic">img-transition</span>)</li>
+          <li>footern</li>
+        </ol>
+      <li>Bilderna på fjärilarna (class <span class="text-italic">butterfly-wrapper</span> och <span
+          class="text-italic">butterfly-flapping</span>)</li>
+    </ol>
+    <div class="center-container">
+      <img id="img-transition" src="assets/img/pexels-george-desipris-moon.jpg" alt="An image of the moon over a sea" />
     </div>
+  </article>
 
-    <article>
-      <h2>Lorem ipsum dolor sit</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error
-        unde, expedita, tempora molestias fugit, dolorem eaque exercitationem
-        pariatur animi incidunt at ex perspiciatis nihil. Ad eum cumque
-        voluptatum vero. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Rerum error unde, expedita, tempora molestias fugit, dolorem eaque
-        exercitationem pariatur animi incidunt at ex perspiciatis nihil. Ad eum
-        cumque voluptatum vero.
-      </p>
+  <div class="butterfly-container">
+    <div class="butterfly-wrapper">
+      <img src="assets/img/butterfly.webp" alt="a nice butterfly" />
+    </div>
+    <div class="butterfly-wrapper">
+      <img src="assets/img/butterfly.webp" alt="a nice butterfly" />
+    </div>
+  </div>
 
-      <button id="animate-button">Start</button>
-      <div id="animated"></div>
+  <article class="article-fade">
+    <h2>Animationer och JavaScript</h2>
+    <H3>Knappen för att visa/dölja en div och ändra text</h3>
+    <p>
+      En vanlig effekt är att något händer när man klickar på en knapp, vilket görs genom att koppla en
+      händelsehanterare till knappen. Knappen på denna sida är länkad till ett script som visar och döljer en div,
+      och byter även knappens text.
+    </p>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error
-        unde, expedita, tempora molestias fugit, dolorem eaque exercitationem
-        pariatur animi incidunt at ex perspiciatis nihil. Ad eum cumque
-        voluptatum vero. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Rerum error unde, expedita, tempora molestias fugit, dolorem eaque
-        exercitationem pariatur animi incidunt at ex perspiciatis nihil. Ad eum
-        cumque voluptatum vero.
-      </p>
-      <div>
-        <img
-          id="img-transition"
-          src="img/pexels-george-desipris-748626.jpg"
-          alt="An image of the moon over a sea"
-        />
-      </div>
+    <button id="animate-button">Start animation</button>
 
-      <p id="last">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error
-        unde, expedita, tempora molestias fugit, dolorem eaque exercitationem
-        pariatur animi incidunt at ex perspiciatis nihil. Ad eum cumque
-        voluptatum vero. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Rerum error unde, expedita, tempora molestias fugit, dolorem eaque
-        exercitationem pariatur animi incidunt at ex perspiciatis nihil. Ad eum
-        cumque voluptatum vero.
-      </p>
-    </article>
+    <div id="animated"></div>
+    <p>
+      Själva knappen skapas i HTML. Men divens animation och utseende styrs av CSS.
+    </p>
+    <h3>Sfären som roterar i bakgrunden</h3>
+    <p>
+      Den roterande sfären i bakgrunden är ganska avancerad. Men det är inte främst JavaScriptet som gör det, utan ett
+      intrikat samspel med CSS.</p>
+    <ol>
+      <li>
+        <p>Skriptet hämtar diven där själva sfären ska ritas upp och initierar en tom array</p>
+      </li>
+      <li>
+        <p>En sfär är 180 grader, så for-loopen räknar upp till max 179. I exemplet räknas varje loopvarv upp med 8,
+          vilket ger 180 / 8 = 22.5 divar (22 st).</p>
+      </li>
+      <li>
+        <p>rows.push lägger för varje loop-varv till en skapad diven i arrayen, och rotateY roterar den runt y-axeln med
+          [i] grader. Ingen rörelse alltså, enbart roterad linje.</p>
+      </li>
+      <li>
+        <p>row.join("") tar alla nu 22 skapade divar och lägger dem i rad, utan mellanslag</p>
+      </li>
+    </ol>
+    <p>Men inget rör sig än. Det är i CSS själva rörelserna skapas.</p>
+    <ol>
+      <li>
+        <p><span class="text-italic">sphere-container</span> fixerar elementet på sidan (täckande) och lägger till en
+          gradient
+          bakgrund. Den placerar även sfären bakom alla andra element.</p>
+      </li>
+      <li>
+        <p><span class="text-italic">sphere-scene</span> bestämmer storleken sfären tillåts ta på sidan, och tillåter
+          child-element att vara just 3D (annars kollapsar de till 2D).</p>
+      </li>
+      <li>
+        <p><span class="text-italic">sphere-wrapper</span> är även den till för tillåta 3D, men nu är det <span
+            class="text-italic">sphere-rotate</span> (CSS-namnet på animationen) som ska transponeras utan att förlora
+          effekten från <span class="text-italic">spere-scene</span>.</p>
+      </li>
+      <li>
+        <p><span class="text-italic">sphere-rotate</span> visar den faktiska sfär-kroppen, och gör så att den roterar
+          kring sin egna axel.</p>
+      </li>
+      <li>
+        <p><span class="text-italic">rotate-Sphere</span> är den huvudsakliga CSS-animationen. Den roterar i både x- och
+          y-led, och dess start på 0 (inplicit) och stopp på 360 ger en sömlös loop.</p>
+      </li>
+    </ol>
+    <p>
+      Används inte JavaScript alls för animationer? Gå vidare här: <a href="exercises.html">JavaScript och animationer</a>
+    </p>
+  </article>
 
-    <footer>
-      <p>The Moon</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+  <div id="footer-hack"></div>
+
+  <footer>
+    <nav >
+      <p id="footer-menu">| <a href="index.html">hem</a> | <a href="exercises.html">resurser</a> | </p>
+    </nav>
+    <p>UNLEACH YOUR ANIMATED FURY!</p>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+
 </html>
